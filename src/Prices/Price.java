@@ -1,9 +1,9 @@
 package Prices;
 
-abstract class Price {
-    abstract int getPriceCode();
-    abstract double getMoney(int daysRented);
-    int getFrequentRenterPoints(int daysRented) {
+public abstract class Price {
+    public abstract int getPriceCode();
+    public abstract double getMoney(int daysRented);
+    public int getFrequentRenterPoints(int daysRented) {
         return 1;
     }
 }
