@@ -1,7 +1,20 @@
 package Prices;
 
-/**
- * Created by pmbremer on 30.04.16.
- */
-public class RegularPrice {
+import Program.Movie;
+
+public class RegularPrice implements Price{
+    public int getPriceCode(){
+        return Movie.REGULAR;
+    }
+    public double getMoney(int daysRented) {
+        if (daysRented > 2) {
+            return 2 + (daysRented - 2) * 1.5;
+        } else {
+            return 2;
+        }
+    }
+
+    public int getFrequentRenterPoints(int daysRented) {
+        return 1;
+    }
 }

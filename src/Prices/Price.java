@@ -1,7 +1,7 @@
 package Prices;
 
-/**
- * Created by pmbremer on 30.04.16.
- */
-public class Price {
+public interface Price {
+    abstract int getPriceCode();
+    abstract double getMoney(int daysRented);
+    abstract int getFrequentRenterPoints(int daysRented);
 }

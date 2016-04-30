@@ -22,7 +22,7 @@ public class RentalTest {
             Movie movie = new Movie(title,pricecode);
             Rental rental = new Rental(movie, days_rented);
 
-            assertEquals(calcMoney(pricecode,days_rented),rental.getMoney(),0.0);
+            assertEquals("PriceCode: "+pricecode+" days_rented: "+days_rented,calcMoney(pricecode,days_rented),rental.getMoney(),0.0);
 
         }
     }
