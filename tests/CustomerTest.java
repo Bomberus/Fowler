@@ -1,3 +1,6 @@
+import Program.Customer;
+import Program.Movie;
+import Program.Rental;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -44,7 +47,7 @@ public class CustomerTest {
     }
 
     private String makeStatus(String movie_title, int days_rented, int pricecode, String customer_title, double amount,int freq_renter_points){
-        String status = "Rental Record for " + customer_title + "\n";
+        String status = "Program.Rental Record for " + customer_title + "\n";
         status += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
         if (!movie_title.isEmpty()) {
             status += "\t" + movie_title + "\t" + "\t" + days_rented + "\t" + String.valueOf(amount) + "\n";
