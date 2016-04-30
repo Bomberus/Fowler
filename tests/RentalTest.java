@@ -34,20 +34,20 @@ public class RentalTest {
             Movie movie = new Movie(title,pricecode);
             Rental rental = new Rental(movie, days_rented);
 
-            assertEquals(calcBonus(pricecode,days_rented),rental.getBonusPoints());
+            assertEquals("PriceCode: "+pricecode+" days_rented: "+days_rented,calcBonus(pricecode,days_rented),rental.getBonusPoints());
 
         }
     }
 
     private int calcBonus(int pricecode, int days_rented) {
-        if (pricecode == Movie.NEW_RELEASE && days_rented > 0) {
+        if (pricecode == Movie.NEW_RELEASE && days_rented > 1) {
             return 2;
         }
         return 1;
     }
 
     private double calcMoney(int pricecode, int days_rented) {
-        double result = 0.0;
+        double result = 0;
         switch (pricecode) {
             case 0:
                 result += 2;
