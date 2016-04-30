@@ -2,7 +2,7 @@ package Prices;
 
 import Program.Movie;
 
-public class ChildPrice implements Price {
+public class ChildPrice extends Price {
 
     public int getPriceCode(){
 
@@ -16,10 +16,5 @@ public class ChildPrice implements Price {
         else {
             return 1.5;
         }
-    }
-
-    public int getFrequentRenterPoints(int daysRented) {
-
-        return 1;
     }
 }

@@ -1,7 +1,9 @@
 package Prices;
 
-public interface Price {
+abstract class Price {
     abstract int getPriceCode();
     abstract double getMoney(int daysRented);
-    abstract int getFrequentRenterPoints(int daysRented);
+    int getFrequentRenterPoints(int daysRented) {
+        return 1;
+    }
 }

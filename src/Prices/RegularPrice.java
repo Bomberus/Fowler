@@ -2,7 +2,7 @@ package Prices;
 
 import Program.Movie;
 
-public class RegularPrice implements Price{
+public class RegularPrice extends Price{
     public int getPriceCode(){
         return Movie.REGULAR;
     }
@@ -12,9 +12,5 @@ public class RegularPrice implements Price{
         } else {
             return 2;
         }
-    }
-
-    public int getFrequentRenterPoints(int daysRented) {
-        return 1;
     }
 }
