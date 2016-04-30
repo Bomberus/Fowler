@@ -46,7 +46,7 @@ public class RentalTest {
         return 1;
     }
 
-    public double calcMoney(int pricecode, int days_rented) {
+    private double calcMoney(int pricecode, int days_rented) {
         double result = 0.0;
         switch (pricecode) {
             case 0:
