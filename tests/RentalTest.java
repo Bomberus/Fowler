@@ -25,6 +25,27 @@ public class RentalTest {
         }
     }
 
+    @Test
+    public void getBonusPointsTest(){
+        String title = "XXL dreckiges Geschirr";
+        for (int i = 0; i < 100; i++){
+            int pricecode = (int)(Math.random()*3);
+            int days_rented = (int)(Math.random()*100);
+            Movie movie = new Movie(title,pricecode);
+            Rental rental = new Rental(movie, days_rented);
+
+            assertEquals(calcBonus(pricecode,days_rented),rental.getBonusPoints());
+
+        }
+    }
+
+    private int calcBonus(int pricecode, int days_rented) {
+        if (pricecode == Movie.NEW_RELEASE && days_rented > 0) {
+            return 2;
+        }
+        return 1;
+    }
+
     public double calcMoney(int pricecode, int days_rented) {
         double result = 0.0;
         switch (pricecode) {
@@ -44,6 +65,8 @@ public class RentalTest {
         }
         return result;
     }
+
+
 
 
 }
